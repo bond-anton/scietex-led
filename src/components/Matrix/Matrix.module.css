@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  border: 0;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  border: var(--matrix-border-width, 1px) solid var(--matrix-border-color, #d1e032);
+  border-radius: var(--matrix-border-radius, 0.2rem);
+}
+
+.matrix {
+  display: grid;
+  align-items: flex-start;
+  gap: 0;
+  padding: 0;
+  background-color: var(--matrix-bg-color, transparent);
+  border: 0;
+}

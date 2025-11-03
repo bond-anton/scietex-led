@@ -1,0 +1,34 @@
+.led {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: var(--pixel-border-width, 1px) solid var(--pixel-border-color, #111827);
+  border-radius: var(--pixel-border-radius, 0);
+  transition: all var(--pixel-transition-time, 0.3s) ease-in-out;
+  background-color: var(--pixel-off-color, transparent);
+  color: black;
+}
+
+.led[data-on='true'] {
+  background-color: var(--pixel-on-color, #374151);
+  color: lightgray;
+}
+
+/* Optional: Add pulse animation for ON state */
+.pulse {
+  animation: pulse var(--pixel-pulse-duration, 2s) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
